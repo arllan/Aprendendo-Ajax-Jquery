@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template Inicial</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <div class="container-fluid">
+      <div class="row clearfix">
+        <div class="col-md-4 column">
+        </div>
+        <div class="col-md-4 column">
+           <button id="botao" type="button" class="btn btn-primary btn-lg btn-block">Carregar arquivo .txt</button>
+        </div>
+        <div class="col-md-4 column">
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <center><span id="texto"> - </span></center> <!-- o arquivo .txt vai ser mostrado aqui-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+      $('#botao').on("click",CarregandoTxt); // quando o botão e clicado e chamado a função que carrega o arquivo
+
+      function CarregandoTxt() { // função que carrega o arquivo .txt
+        $('#texto').load('dados.txt');
+      }
+    </script>
+  </body>
+</html>
